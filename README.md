@@ -38,6 +38,9 @@ https://developer.apple.com/documentation/coreservices/launch_services
 https://docs.lightning.engineering/the-lightning-network/payment-lifecycle/understanding-lightning-invoices#uri-scheme
 
 List of Lightning Wallets compiled from the following sources:
+
 https://stacker.news/items/733538
+
 https://x.com/SDWouters/status/1894407675158372433
+
 https://nwc.dev/
