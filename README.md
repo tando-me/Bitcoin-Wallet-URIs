@@ -9,26 +9,30 @@ Apparently each app can register not just as a handler for ```lightning:``` but 
 
 If you as an app developer know to look for these domain-specific URI's, you could give your users the ability to choose a default app when handling ```lightning:``` URIs. The only problem is that there is no known repository of all the domain-specific URI's that are in use by all of the different wallet apps, and so everyone is left guessing. This repo is an attempt to collect all known URIs for all wallets to that you can give your (iOS) users choices on which app they want to associate with lightning payments.
 
-|App Name         |deepLink URI              |
-|-----------------|--------------------------|
-|Alby Go          |                          |
-|Amber App        |                          |
-|Aqua             |                          |
-|Bitkit           |                          |
-|Blink            |blink:lightning:          |
-|Blitz            |                          |
-|Blixt            |                          |
-|Breez            |                          |
-|Fedi             |                          |
-|Lipa             |                          |
-|Machankura       |                          |
-|Muun             |muun:lightning:           |
-|Phoenix          |phoenix:lightning:        |
-|Satoshi          |                          |
-|Strike           |                          |
-|Wallet of Satoshi|walletofsatoshi:lightning:|
-|ZBD              |zebedee:lightning:        |
-|Zeus             |                          |
+|App Name         |deepLink URI              |LSApplicationQueriesSchemes|
+|-----------------|--------------------------|---------------------------|
+|Alby Go          |                          |                           |
+|Amber App        |                          |                           |
+|Aqua             |                          |                           |
+|Bitkit           |                          |                           |
+|Blink            |blink:lightning:          |bitcoinbeach               |
+|Blitz            |                          |                           |
+|Blixt            |                          |                           |
+|Blue Wallet      |bluewallet:lightning://   |bluewallet                 |
+|Breez            |breez://                  |breez                      |
+|CashApp          |squarecash:               |cashapp                    |
+|Fedi             |                          |                           |
+|Lipa             |                          |                           |
+|Machankura       |                          |                           |
+|Muun             |muun:lightning:           |muun                       |
+|Phoenix          |phoenix:lightning:        |phoenix                    |
+|Satoshi          |                          |                           |
+|Strike           |strike://                 |strike                     |
+|Wallet of Satoshi|walletofsatoshi:lightning:|walletofsatoshi            |
+|ZBD              |zebedee:lightning:        |zebedee                    |
+|Zeus             |zeusln:                   |zeusln                     |
+
+
 
 
 See also:
