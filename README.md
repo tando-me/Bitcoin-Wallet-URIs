@@ -18,8 +18,8 @@ If you as an app developer know to look for these domain-specific URI's, you cou
 |Blink            |blink:lightning:          |bitcoinbeach               |
 |Blitz            |                          |                           |
 |Blixt            |                          |                           |
-|Blue Wallet      |bluewallet:lightning://   |bluewallet                 |
-|Breez            |breez://                  |breez                      |
+|Blue Wallet      |bluewallet:lightning:   |bluewallet                 |
+|Breez            |breez:                  |breez                      |
 |CashApp          |squarecash:               |cashapp                    |
 |Fedi             |                          |                           |
 |Lipa             |                          |                           |
@@ -27,7 +27,7 @@ If you as an app developer know to look for these domain-specific URI's, you cou
 |Muun             |muun:lightning:           |muun                       |
 |Phoenix          |phoenix:lightning:        |phoenix                    |
 |Satoshi          |                          |                           |
-|Strike           |strike://                 |strike                     |
+|Strike           |strike:                 |strike                     |
 |Wallet of Satoshi|walletofsatoshi:lightning:|walletofsatoshi            |
 |ZBD              |zebedee:lightning:        |zebedee                    |
 |Zeus             |zeusln:                   |zeusln                     |
