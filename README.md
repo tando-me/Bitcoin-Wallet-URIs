@@ -14,7 +14,7 @@ If you as an app developer know to look for these domain-specific URI's, you cou
 |Alby Go          |                          |                           |
 |Amber App        |                          |                           |
 |Aqua             |                          |                           |
-|Bitkit           |bitkit:                 |bitkit                           |
+|Bitkit           |bitkit:lightning:         |bitkit                           |
 |Blink            |blink:lightning:          |bitcoinbeach               |
 |Blitz            |                          |                           |
 |Blixt            |                          |                           |
