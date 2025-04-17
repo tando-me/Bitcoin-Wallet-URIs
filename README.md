@@ -9,7 +9,7 @@ Apparently each app can register not just as a handler for ```lightning:``` but 
 
 If you as an app developer know to look for these domain-specific URI's, you could give your users the ability to choose a default app when handling ```lightning:``` URIs. The only problem is that there is no known repository of all the domain-specific URI's that are in use by all of the different wallet apps, and so everyone is left guessing. This repo is an attempt to collect all known URIs for all wallets to that you can give your (iOS) users choices on which app they want to associate with lightning payments.
 
-| App Name | Android Scheme | LSApplicationQueriesSchemes |
+| App Name | android:scheme | iOS CFBundleURLSchemes |
 |----------|----------------|------------------------------|
 | [Alby Go](https://getalby.com/products/alby-go) | [alby:](https://github.com/getAlby/go/blob/5a0f24c0bedceedc0514e4a81af50ba78859f4fb/lib/link.ts#L10) | [alby](https://github.com/getAlby/go/blob/5a0f24c0bedceedc0514e4a81af50ba78859f4fb/lib/link.ts#L10) |
 | [Amber App](https://amber.app/) |  |  |
