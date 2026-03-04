@@ -26,8 +26,8 @@ If you as an app developer know to look for these domain-specific URI's, you cou
 | [Flash](https://getflash.io/) | flash: | [flash](https://github.com/lnflash/flash-mobile/blob/2d053ba553bd552cf5bfc7dd91c6deb646ec4546/ios/LNFlash/Info.plist#L46C13-L46C18) |
 | [Lipa](https://lipa.swiss/en) |  |  |
 | [Machankura](https://8333.mobi/) |  |  |
-| [Muun](https://muun.com/) | [muun:lightning:](https://github.com/muun/apollo/blob/91449f0b970cc096f46c2b4fd27bdb014eebad35/android/apolloui/src/main/AndroidManifest.xml#L186) | [muun](https://github.com/muun/falcon/blob/88b3389acb9c955c0cc252bd9bab7c632e920253/falcon/app/falcon/Info.plist#L42) |
-| [Phoenix](https://phoenix.acinq.co/) | [phoenix:lightning:](https://github.com/ACINQ/phoenix/blob/57faa66d7dcfdb84dd6a87efb7b81e4f1368d7d6/phoenix-android/src/main/AndroidManifest.xml#L65) | [phoenix](https://github.com/ACINQ/phoenix/blob/57faa66d7dcfdb84dd6a87efb7b81e4f1368d7d6/phoenix-ios/phoenix-ios/Info.plist#L42) |
+| [Muun](https://muun.com/) | [muun:lightning:](https://github.com/muun/apollo/blob/91449f0b970cc096f46c2b4fd27bdb014eebad35/android/apolloui/src/main/AndroidManifest.xml#L179) | [muun](https://github.com/muun/falcon/blob/88b3389acb9c955c0cc252bd9bab7c632e920253/falcon/app/falcon/Info.plist#L32) |
+| [Phoenix](https://phoenix.acinq.co/) | [phoenix:lightning:](https://github.com/ACINQ/phoenix/blob/57faa66d7dcfdb84dd6a87efb7b81e4f1368d7d6/phoenix-android/src/main/AndroidManifest.xml#L58) | [phoenix](https://github.com/ACINQ/phoenix/blob/57faa66d7dcfdb84dd6a87efb7b81e4f1368d7d6/phoenix-ios/phoenix-ios/Info.plist#L32) |
 | [Primal](https://primal.net/) | [nostrnwc+primal:](https://github.com/PrimalHQ/primal-android-app/blob/bb63e6c5b646137eea64ebf95c75b91fc4086314/app/src/main/AndroidManifest.xml#L284C39-L284C54) | [primal](https://github.com/PrimalHQ/primal-ios-app/blob/52257cfa77fd0f9b82875829de86b65f2b92a0bd/Primal/Info.plist#L14) |
 | [Satoshi](https://satoshi.money/) |  |  |
 | [Speed](https://www.speed.app/) |  |  |
