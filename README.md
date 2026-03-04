@@ -11,8 +11,8 @@ If you as an app developer know to look for these domain-specific URI's, you cou
 
 | App Name | android:scheme | iOS CFBundleURLSchemes |
 |----------|----------------|------------------------------|
-| [Alby Go](https://getalby.com/products/alby-go) | [alby:](https://github.com/getAlby/go/blob/5a0f24c0bedceedc0514e4a81af50ba78859f4fb/lib/link.ts#L10) | [alby](https://github.com/getAlby/go/blob/5a0f24c0bedceedc0514e4a81af50ba78859f4fb/lib/link.ts#L10) |
-| [Amber App](https://amber.app/) |  |  |
+| [Alby Go](https://getalby.com/products/alby-go) | [alby:](https://github.com/getAlby/go/blob/5a0f24c0bedceedc0514e4a81af50ba78859f4fb/lib/link.ts#L10) | [alby](https://github.com/getAlby/go/blob/5a0f24c0bedceedc0514e4a081af50ba78859f4fb/lib/link.ts#L10) |
+| [Amber App](https://amber.app/amberwallet) |  |  |
 | [Aqua](https://www.aquawallet.io/) |  |  |
 | [Bitkit](https://bitkit.to/) | [bitkit:lightning:](https://github.com/synonymdev/bitkit-android/blob/38018018248c8100e6ad204cc62d5b844ad67723/app/src/main/AndroidManifest.xml#L94) | [bitkit](https://github.com/synonymdev/bitkit-ios/blob/11ac9870b989be4f9380a2c8ff92d235fb76ed2a/Bitkit/Info.plist#L13) |
 | [Blink](https://www.blink.sv/) | [blink:lightning:](https://github.com/blinkbitcoin/blink-mobile/blob/7c198065471dca9e94209e4145a081933455adca/android/app/src/main/AndroidManifest.xml#L62) | [blink](https://github.com/blinkbitcoin/blink-mobile/blob/7c198065471dca9e94209e4145a081933455adca/ios/GaloyApp/Info.plist#L43) |
@@ -20,11 +20,10 @@ If you as an app developer know to look for these domain-specific URI's, you cou
 | [Blixt](https://blixtwallet.github.io/) | [blixtwallet:](https://github.com/hsjoberg/blixt-wallet/blob/48d2e67c69bc1961425324bbbd1fb23a2aedc62f/android/app/src/main/AndroidManifest.xml#L59) | [blixtwallet](https://github.com/hsjoberg/blixt-wallet/blob/48d2e67c69bc1961425324bbbd1fb23a2aedc62f/ios/BlixtWallet/Info.plist#L32) |
 | [Blue Wallet](https://bluewallet.io/) | [bluewallet:lightning:](https://github.com/BlueWallet/BlueWallet/blob/a466ebca42a184d770ff9fcc61f370a54561f66b/android/app/src/main/AndroidManifest.xml#L150) | [bluewallet](https://github.com/BlueWallet/BlueWallet/blob/a466ebca42a184d770ff9fcc61f370a54561f66b/ios/BlueWallet/Info.plist#L116) |
 | [Breez](https://breez.technology/) | [breez:](https://github.com/breez/breezmobile/blob/970272b63f2e4de4213df3320452a30675a7b724/android/app/src/main/AndroidManifest.xml#L100) | [breez](https://github.com/breez/breezmobile/blob/970272b63f2e4de4213df3320452a30675a7b724/ios/Runner/Info.plist#L70) |
-| [CashApp](https://cash.app/) | |  |
-| [Electrum](https://electrum.org/) |  |  |
+| [CashApp](https://cash.app/) |  |  |
+| [Electrum](https://electrum.org/) | [lightning:](https://github.com/spesmilo/electrum/blob/28bbb4bdda6ee1c17577bd63b49ecddc0f076149/contrib/android/bitcoin_intent.xml#L7) |  |
 | [Fedi](https://www.fedi.xyz/) | [fedi:](https://github.com/fedixyz/fedi/blob/e29f732ede5ad735ca05c5c2282bee5e1e774307/ui/native/android/app/src/main/AndroidManifest.xml#L57) | [fedi](https://github.com/fedixyz/fedi/blob/e29f732ede5ad735ca05c5c2282bee5e1e774307/ui/native/ios/FediReactNative/Info.plist#L28) |
 | [Flash](https://getflash.io/) | flash: | [flash](https://github.com/lnflash/flash-mobile/blob/2d053ba553bd552cf5bfc7dd91c6deb646ec4546/ios/LNFlash/Info.plist#L46C13-L46C18) |
-| [Lipa](https://lipa.swiss/en) |  |  |
 | [Machankura](https://8333.mobi/) |  |  |
 | [Muun](https://muun.com/) | [muun:lightning:](https://github.com/muun/apollo/blob/91449f0b970cc096f46c2b4fd27bdb014eebad35/android/apolloui/src/main/AndroidManifest.xml#L179) | [muun](https://github.com/muun/falcon/blob/88b3389acb9c955c0cc252bd9bab7c632e920253/falcon/app/falcon/Info.plist#L32) |
 | [Phoenix](https://phoenix.acinq.co/) | [phoenix:lightning:](https://github.com/ACINQ/phoenix/blob/57faa66d7dcfdb84dd6a87efb7b81e4f1368d7d6/phoenix-android/src/main/AndroidManifest.xml#L58) | [phoenix](https://github.com/ACINQ/phoenix/blob/57faa66d7dcfdb84dd6a87efb7b81e4f1368d7d6/phoenix-ios/phoenix-ios/Info.plist#L32) |
