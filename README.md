@@ -34,7 +34,7 @@ If you as an app developer know to look for these domain-specific URI's, you cou
 | [Strike](https://strike.me/) | strike: | strike |
 | [Wallet of Satoshi](https://www.walletofsatoshi.com/) | walletofsatoshi:lightning: | walletofsatoshi |
 | [ZBD](https://zbd.gg/) |  |  |
-| [Zeus](https://zeusln.app/) | [zeusln:](https://github.com/ZeusLN/zeus/blob/8285c4e9b17e70ee5d78d4eee3a3adb963040130/android/app/src/main/AndroidManifest.xml#L126) | [zeusln](https://github.com/ZeusLN/zeus/blob/8285c4e9b17e70ee5d78d4eee3a3adb963040130/ios/zeus/Info.plist#L40) |
+| [Zeus](https://zeusln.app/) | [zeusln:](https://github.com/ZeusLN/zeus/blob/8285c4e9b17e70ee5d78d4eee3a3adb963040130/android/app/src/main/AndroidManifest.xml#L78) | [zeusln](https://github.com/ZeusLN/zeus/blob/8285c4e9b17e70ee5d78d4eee3a3adb963040130/ios/zeus/Info.plist#L32) |
 
 
 
