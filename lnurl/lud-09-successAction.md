@@ -1,10 +1,8 @@
-# LUD-09: successAction `url` Tag Support
+# LUD-09 successAction `url` Tag - Wallet Support
 
 Does the wallet display the `successAction` URL (description + clickable link) to the user after a successful LNURL-pay payment?
 
 Spec: [LUD-09](https://github.com/lnurl/luds/blob/luds/09.md)
-
-The `successAction` field with tag `url` allows a payment recipient to return a description and URL to the sender after payment. This is useful for receipts, order confirmations, digital content delivery, and more. Wallets that support this display the description and offer to open the URL. Wallets that don't simply show a generic "payment sent" screen.
 
 ## Tested
 
@@ -28,7 +26,10 @@ The `successAction` field with tag `url` allows a payment recipient to return a 
 | [Fedi](https://www.fedi.xyz/) | NO | Fail | Doesn't parse successAction from response at all |
 | [Flash](https://getflash.io/) | YES | Fail | Has Breez SDK but doesn't surface URL in UI |
 | [Minibits](https://www.minibits.cash) | NO | Fail | Has LNURL-pay but never processes successAction |
+| [Lexe](https://lexe.app) | NO | Fail | No successAction rendering; also errors on strict enforcement of description hash |
 | [Strike](https://strike.me/) | Unknown | Fail | Closed source |
+| [Evento](https://evento.so/) | Unknown | Fail | Web-based |
+| [Tether Wallet](https://wallet.tether.io/) | NO | Fail | No successAction code found in WDK repo |
 
 ## Untested
 
@@ -37,7 +38,6 @@ The `successAction` field with tag `url` allows a payment recipient to return a 
 | [Blixt](https://blixtwallet.github.io/) | YES | Description + URL link + Copy/Open buttons in code |
 | [Aqua](https://www.aquawallet.io/) | NO | Has data model but no UI rendering of successAction |
 | [Electrum](https://electrum.org/) | NO | No successAction handling in code |
-| [Lexe](https://lexe.app) | NO | Has LNURL-pay but no successAction rendering |
 | [Muun](https://muun.com/) | NO | No LNURL-pay code found |
 | [ShockWallet](https://shock.network) | NO | Passes data through but no UI rendering |
 | [Amber](https://amber.app/amberwallet) | Unknown | Closed source |
@@ -52,15 +52,11 @@ The `successAction` field with tag `url` allows a payment recipient to return a 
 ## Summary
 
 - **Pass (7):** Alby Go, Blink, Blitz, Breez, Phoenix, Wallet of Satoshi, Zeus
-- **Fail (8):** Bitkit, Bitnob, Blue Wallet, Coinos, Fedi, Flash, Minibits, Strike
+- **Fail (11):** Bitkit, Bitnob, Blue Wallet, Coinos, Evento, Fedi, Flash, Lexe, Minibits, Strike, Tether Wallet
 - **N/A (4):** Blockstream Green, Cake Wallet, Primal, River
 - **Should support, untested (1):** Blixt
 - **Should NOT support (6):** Aqua, Cake Wallet, Electrum, Lexe, Muun, ShockWallet
 - **Unknown (8):** Remaining closed-source or no-code-found wallets (includes Machankura)
-
-## Methodology
-
-"Should Support" is determined by reviewing the wallet's open-source code for successAction handling. "Tested" is a real-world test: send a payment to an LNURL-pay endpoint that returns a `successAction` with tag `url`, and check whether the wallet displays the description and link.
 
 ## Last updated
 
