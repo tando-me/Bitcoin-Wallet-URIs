@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bitcoin Wallet URI Test Suite</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         max-width: 720px; margin: 0 auto; padding: 1rem; line-height: 1.5; color: #222; }
+  h1 { margin-bottom: 0.25rem; }
+  .sub { color: #666; margin-top: 0; }
+  .panel { background: #f6f6f6; padding: 1rem; border-radius: 8px; margin: 1rem 0; }
+  label { display: block; font-weight: 600; margin-bottom: 0.25rem; }
+  input[type=text] { width: 100%; padding: 0.5rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+                     font-size: 0.9rem; box-sizing: border-box; }
+  .hint { font-size: 0.85rem; color: #666; margin-top: 0.25rem; }
+  h2 { margin-top: 2rem; border-bottom: 1px solid #ddd; padding-bottom: 0.25rem; }
+  ul.wallets { list-style: none; padding: 0; }
+  ul.wallets li { padding: 0.6rem 0; border-bottom: 1px solid #eee; display: flex;
+                  justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+  ul.wallets li .name { font-weight: 600; flex: 1 1 8rem; }
+  ul.wallets li .scheme { font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+                          font-size: 0.8rem; color: #666; flex: 1 1 10rem; word-break: break-all; }
+  ul.wallets li a.test { background: #2d7cf0; color: white; padding: 0.4rem 0.9rem;
+                         border-radius: 6px; text-decoration: none; font-weight: 600; }
+  ul.wallets li a.test:active { background: #1a5dc2; }
+  .note { font-size: 0.9rem; color: #555; }
+  code { background: #eee; padding: 0.1rem 0.3rem; border-radius: 3px; font-size: 0.9em; }
+  footer { margin-top: 3rem; font-size: 0.85rem; color: #888; }
+</style>
+</head>
+<body>
+
+<h1>Bitcoin Wallet URI Test Suite</h1>
+<p class="sub">Tap a link on a mobile device. If the corresponding wallet opens, the scheme works.</p>
+
+<p class="note">
+  Each wallet below registers a custom URI scheme with the mobile OS so apps can invoke it directly,
+  bypassing the single default <code>lightning:</code> handler. Sources for every scheme are tracked in
+  <a href="uri-schemes.md">uri-schemes.md</a>.
+</p>
+
+<div class="panel">
+  <label for="payload">Test payload (LNURL, invoice, or any payment string)</label>
+  <input id="payload" type="text" value="LNURL1DP68GURN8GHJ7ARPDEJX7TNPVEEXJCMP9AKXUATJD3CZ77NPWQD7NQ0U">
+  <p class="hint">Edit above to rebuild every test link below with your own payload.</p>
+</div>
+
+<h2>Dedicated schemes</h2>
+<p class="note">These links should open a specific wallet, unambiguously.</p>
+<ul class="wallets" id="dedicated"></ul>
+
+<h2>Shared <code>lightning:</code> handler</h2>
+<p class="note">
+  These wallets register only <code>lightning:</code> (no dedicated scheme), so tapping the
+  generic link below will open whichever app was most recently set as the OS default handler.
+  Cannot disambiguate a specific wallet this way.
+</p>
+<ul class="wallets" id="shared"></ul>
+
+<h2>iOS-only variants</h2>
+<p class="note">
+  A few wallets register different schemes on iOS than on Android. If the primary link above
+  does nothing on iOS, try the iOS-format variant below.
+</p>
+<ul class="wallets" id="ios"></ul>
+
+<footer>
+  Part of the <a href="https://github.com/tando-me/bitcoin-wallet-compatibility">bitcoin-wallet-compatibility</a>
+  project. PRs welcome to add wallets, correct schemes, or report test results.
+</footer>
+
+<script>
+// Wallets with dedicated URI schemes. `scheme` is the full prefix that goes
+// before the payload, per each app's source (see uri-schemes.md).
+const dedicated = [
+  { name: "Alby Go",           scheme: "alby:" },
+  { name: "Bitkit",            scheme: "bitkit:lightning:" },
+  { name: "Blink",             scheme: "blink:lightning:" },
+  { name: "Blitz",             scheme: "blitz-wallet:" },
+  { name: "Blixt",             scheme: "blixtwallet:" },
+  { name: "Blockstream Green", scheme: "blockstream:lightning:" },
+  { name: "Blue Wallet",       scheme: "bluewallet:lightning:" },
+  { name: "Breez",             scheme: "breez:" },
+  { name: "Fedi",              scheme: "fedi:" },
+  { name: "Flash",             scheme: "flash:" },
+  { name: "Muun",              scheme: "muun:lightning:" },
+  { name: "Phoenix",           scheme: "phoenix:lightning:" },
+  { name: "Primal",            scheme: "nostrnwc+primal:" },
+  { name: "Strike",            scheme: "strike:" },
+  { name: "Wallet of Satoshi", scheme: "walletofsatoshi:lightning:" },
+  { name: "Zeus",              scheme: "zeusln:" },
+];
+
+// Wallets that register only the generic lightning: scheme.
+const shared = [
+  { name: "Coinos",       scheme: "lightning:" },
+  { name: "Electrum",     scheme: "lightning:" },
+  { name: "Lexe",         scheme: "lightning:" },
+  { name: "Minibits",     scheme: "lightning:" },
+  { name: "ShockWallet",  scheme: "lightning:" },
+  { name: "Volt",         scheme: "lightning:" },
+];
+
+// Cases where iOS uses a different scheme than Android. Payload follows after "://".
+const ios = [
+  { name: "Bitkit (iOS)",            scheme: "bitkit://" },
+  { name: "Blink (iOS)",             scheme: "blink://" },
+  { name: "Blixt (iOS)",             scheme: "blixtwallet://" },
+  { name: "Blockstream Green (iOS)", scheme: "lightning:" },
+  { name: "Blue Wallet (iOS)",       scheme: "bluewallet://" },
+  { name: "Fedi (iOS)",              scheme: "fedi://" },
+  { name: "Flash (iOS)",             scheme: "flash://" },
+  { name: "Muun (iOS)",              scheme: "muun://" },
+  { name: "Phoenix (iOS)",           scheme: "phoenix://" },
+  { name: "Primal (iOS)",            scheme: "primal://" },
+  { name: "Wallet of Satoshi (iOS)", scheme: "walletofsatoshi://" },
+  { name: "Zeus (iOS)",              scheme: "zeusln://" },
+];
+
+function render(listId, wallets, payload) {
+  const ul = document.getElementById(listId);
+  ul.replaceChildren();
+  wallets.forEach(w => {
+    const li = document.createElement("li");
+
+    const nameSpan = document.createElement("span");
+    nameSpan.className = "name";
+    nameSpan.textContent = w.name;
+
+    const schemeSpan = document.createElement("span");
+    schemeSpan.className = "scheme";
+    schemeSpan.textContent = w.scheme;
+
+    const a = document.createElement("a");
+    a.className = "test";
+    a.setAttribute("href", w.scheme + payload);
+    a.textContent = "Open";
+
+    li.append(nameSpan, schemeSpan, a);
+    ul.appendChild(li);
+  });
+}
+
+function renderAll() {
+  const payload = document.getElementById("payload").value.trim();
+  render("dedicated", dedicated, payload);
+  render("shared",    shared,    payload);
+  render("ios",       ios,       payload);
+}
+
+document.getElementById("payload").addEventListener("input", renderAll);
+renderAll();
+</script>
+
+</body>
+</html>

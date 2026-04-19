@@ -11,6 +11,7 @@ Each feature is tracked at three levels:
 
 ### URI Schemes
 - [URI Schemes](uri-schemes.md) -- `lightning:`, `bitcoin:`, and wallet-specific URI handlers registered in mobile OS
+- [URI Test Suite](uri-test.html) -- tap-through test page to verify each wallet's registered scheme on a mobile device
 
 ### LNURL (LUD)
 - [LUD-09: successAction `url` tag](lnurl/lud-09-successAction.md) -- does the wallet display a URL + description after payment?

@@ -1,6 +1,8 @@
 # URI Schemes
 A collection of known URIs that Bitcoin Wallet apps register within mobile OS's as Launch Services.
 
+> **Try it:** Open [uri-test.html](uri-test.html) on a mobile device to tap through every scheme below and verify which wallets open.
+
 Early Bitcoin adopters tend to install and test many different bitcoin apps on their smartphones. On iOS this can become a problem as there is no *easy* way to choose a default app to handle requests from other apps for payments. For example App X presents the user with a button to "Pay Lightning Invoice" and when you click on it, it opens a default wallet that is associated within the OS to handle the ```lightning:``` URL. There is currently no way to change the default app on iOS. The user is stuck using whichever app most recently hijacked the URI handler for ```lightning:```.
 
 MoneyBadger (fka CryptoConvert) figured out a solution for iOS to give users the ability to choose an installed app to handle clicking a specific URI (```lightning:```). See their working app: https://apps.apple.com/in/app/cryptoqr-pay/id1617778619
